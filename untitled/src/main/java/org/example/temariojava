@@ -16,6 +16,7 @@ Java es un lenguaje tipado, lo que significa que debes especificar el tipo de ca
     double: para números decimales.
     char: para caracteres individuales.
     boolean: para valores de verdadero o falso.
+    String: para palabras
 
 Ejemplo de declaración de variables:
 
@@ -34,11 +35,29 @@ Los operadores en Java se dividen en varias categorías:
     Asignación: =, +=, -=, *=, /=, etc.
 
 Ejemplo:
-
 int a = 10;
 int b = 5;
 int sum = a + b;
+int resta=a-b;
+int x=5%2;
+x=1;
+
+
 boolean isEqual = (a == b); // false
+boolean isEqual = (a > b); // true
+boolean isEqual = (a != b); // true
+boolean isEqual = (a <= b); // false
+boolean isEqual = false;
+
+int num1=23, num2=56;
+
+if(num1!=54 && num2>45){
+int sum=num1+num2; //true
+}
+else{
+int resta=num1-num2; //false
+}
+
 
 4. Estructuras de Control
 Condicionales
@@ -55,28 +74,65 @@ if (number > 0) {
     switch: Ideal para múltiples opciones basadas en un valor específico.
 
 int day = 3;
+
 switch (day) {
     case 1:
         System.out.println("Monday");
         break;
-    case 2:
-        System.out.println("Tuesday");
+    case 3:
+        System.out.println("miercoles");
         break;
     default:
         System.out.println("Other day");
 }
 
+if(day==1){
+    System.out.println("Monday");
+}
+else if(day==3){
+    System.out.println("miercoles");
+}
+else{
+    System.out.println("Other day");
+}
+
+
+
+int x=5,x=7;
+
+if(x==5){
+    if(y==4){
+        System.out.println("el primer numero es el 5 y el segundo es el 4");
+    }
+    else{
+            System.out.println("Solo el primer numero coincide con el 5");
+    }
+}
+else{
+    System.out.println("NO");
+}
+
+
+
+
+
 Bucles
 
     for: Ejecuta un bloque de código un número específico de veces.
 
-for (int i = 0; i < 5; i++) {
+if(i<10){
+}
+int x=0;
+for (int i = 5; i < 10; i++) {
     System.out.println(i);
+    x=x+i;
+    System.out.println(x);
 }
 
     while: Repite el bloque mientras la condición sea verdadera.
 
 int i = 0;
+
 while (i < 5) {
     System.out.println(i);
     i++;
@@ -94,14 +150,20 @@ do {
 
 Los métodos son bloques de código que realizan tareas específicas y pueden recibir parámetros y devolver valores.
 
-public static int add(int a, int b) {
-    return a + b;
-}
-
 public static void main(String[] args) {
-    int result = add(3, 5);
+    int result = nombfuncion(3, 5);
     System.out.println("Result: " + result);
 }
+
+public static int nombfuncion(int a, int b) {
+    if(a>b){
+    return a - b;
+    }
+    else if(b>=a){
+    return b - a;
+    }
+}
+
 
 6. Clases y Objetos
 
