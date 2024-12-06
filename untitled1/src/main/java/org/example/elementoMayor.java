@@ -11,6 +11,7 @@ public class elementoMayor {
         }
         System.out.println("El mayor elemento del array es: "+max);
         segundoMayor();
+        MayorEn2d();
 
     }
     //Calcular el segundo elemento mayor
@@ -33,5 +34,22 @@ public class elementoMayor {
             }
         }
         System.out.println("El segundo elemento mayor del array es: "+se);
+    }
+    private static void MayorEn2d(){
+        int[][] array2d2={
+                {7,2},
+                {67,4},
+                {5,6}
+        };
+        int max = array2d2[0][0];
+        for(int i=0;i<array2d2.length;i++){
+            for(int j=0;j<array2d2[0].length;j++){
+                if(array2d2[i][j]>max){
+                    max = array2d2[i][j];
+                }
+            }
+        }
+
+        System.out.println("El elemento mayor del array 2D es: "+max);
     }
 }

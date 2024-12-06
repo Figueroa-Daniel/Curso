@@ -31,10 +31,21 @@ public class array2D {
                 array2d[i][j] = scanner.nextInt();
             }
         }
-
-
-
-
-
+        array2dTeclado();
+    }
+    //Decidir la altura y anchura de un array 2D por teclado
+    public static void array2dTeclado(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Dime la anchura del array");
+        int n = scanner.nextInt();
+        System.out.println("Dime la altura del array");
+        int m = scanner.nextInt();
+        int [][] array2dtec = new int[m][n];
+        for(int i=0;i<array2dtec.length;i++){
+            for(int j=0;j<array2dtec[0].length;j++){
+                System.out.print(array2dtec[i][j]+"-");
+            }
+            System.out.println("");
+        }
     }
 }
