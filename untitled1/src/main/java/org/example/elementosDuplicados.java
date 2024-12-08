@@ -2,7 +2,7 @@ package org.example;
 
 public class elementosDuplicados {
     public static void main(String[] args) {
-        //este programa desordena el resultado y modifica el array inicial
+        //este programa desordena el resultado y modifica el array inicial, cuenta los elementos duplicados
         int[] miArray ={1,2,3,4,4,5,6,6,6,6,7,8,8,9};
         int lenght = miArray.length;
         for(int i=0;i<lenght;i++){
@@ -15,5 +15,8 @@ public class elementosDuplicados {
             }
         }
         System.out.println(miArray.length-lenght);
+        for(int i=0;i<miArray.length;i++){
+            System.out.print("-"+miArray[i]);
+        }
     }
 }
