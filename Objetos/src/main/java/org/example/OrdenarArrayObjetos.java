@@ -1,6 +1,6 @@
-package org.example
+package org.example;
 
-class OrdenrArrayObjetos {
+class OrdenarArrayObjetos {
     private int [] notas = {10,5,3,2,8};
     private String [] nombres = {"Juan", "Pedro", "Maria", "Ana", "Luis"};
     public void ordenar(){
@@ -23,7 +23,7 @@ class OrdenrArrayObjetos {
         }
     }
     public static void main(String[] args) {
-        OrdenrArrayObjetos orden = new OrdenrArrayObjetos();
+        OrdenarArrayObjetos orden = new OrdenarArrayObjetos();
         orden.ordenar();
         orden.imprimir();
     }
