@@ -9,7 +9,7 @@ public class ObjetosArrayAlumnos {
         alumnos[3] = new MayorEdad("Ana", 35, 1.60);
         alumnos[4] = new MayorEdad("Luis", 40, 1.90);
         int posicionMasJoven = 0;
-        for (int i = 1; i < alumnos.length; i++){
+        for (int i = 1; i < alumnos.length; i++) {
             /*
             MayorEdad a1 = alumnos[posicionMasJoven];
             MayorEdad a2 = alumnos[i];
@@ -18,11 +18,12 @@ public class ObjetosArrayAlumnos {
             }
             *)
              */
-            if (alumnos[i].getEdad() < alumnos[posicionMasJoven].getEdad()){
+            if (alumnos[i].getEdad() < alumnos[posicionMasJoven].getEdad()) {
                 posicionMasJoven = i;
+            }
+            MayorEdad masJoven = alumnos[posicionMasJoven];
+            System.out.println("El alumno mas joven es: " + masJoven.getNombre() + " con " + masJoven.getEdad() + " años");
         }
-        MayorEdad masJoven = alumnos[posicionMasJoven];
-        System.out.println("El alumno mas joven es: " + masJoven.getNombre()+ " con " + masJoven.getEdad() + " años");
-    }
 
+    }
 }
