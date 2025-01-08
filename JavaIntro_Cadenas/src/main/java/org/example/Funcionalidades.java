@@ -51,6 +51,8 @@ public class Funcionalidades {
 
         if (vacia2.isEmpty()) //Devuelve true si está vacia o solo tiene espacios en blanco
             System.out.println("Está totalmente vacía");
+        // getchar
+        // split->convertir cadena en un array
 
 
 

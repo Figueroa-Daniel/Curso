@@ -52,6 +52,9 @@ public class Manipulacion_cadenas {
         String descripcion ="libros";
         String mensaje = String.format("Compró %d %s a un precio de %.2f euros cada uno.",cantidad,descripcion,precio);
         System.out.println(mensaje);
-
+        // \r -> retorna el contendio y sobrescribe
+        System.out.println("Tres tristres tigres \r comen trigor");
+        // \b un espacio para atras
+        System.out.println("Tres tristres tigres \b\b\b\b comen trigor");
     }
 }
