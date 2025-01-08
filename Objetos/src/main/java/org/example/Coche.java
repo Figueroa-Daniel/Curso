@@ -12,4 +12,13 @@ public class Coche {
     public void arrancar(){
         System.out.println("El coche %s %s %d ha arrancado".formatted(marca, modelo, anio));
     }
+
+    @Override
+    public String toString() {
+        return "Coche{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", anio=" + anio +
+                '}';
+    }
 }
