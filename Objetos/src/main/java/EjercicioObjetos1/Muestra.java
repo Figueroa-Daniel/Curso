@@ -35,7 +35,7 @@ public class Muestra {
     public static int getCantidad() {
         return cantidad;
     }
-    private void Agrandar(){
+    private static void Agrandar(){
         int[] copiaNumeros= numeros.clone();
         numeros = Arrays.copyOf(copiaNumeros, copiaNumeros.length + DEFAULT_SIZE);
     }
