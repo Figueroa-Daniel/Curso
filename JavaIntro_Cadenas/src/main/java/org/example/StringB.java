@@ -50,6 +50,5 @@ public class StringB {
             end--;
         }
         return new String(chars);
-
     }
 }
