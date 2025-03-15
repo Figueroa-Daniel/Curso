@@ -13,10 +13,14 @@ public class HelloWorld {
 Java es un lenguaje tipado, lo que significa que debes especificar el tipo de cada variable. Algunos tipos básicos son:
 
     int: para enteros (números sin decimales).
+    float: para números decimales.
     double: para números decimales.
     char: para caracteres individuales.
     boolean: para valores de verdadero o falso.
     String: para palabras
+    String palabra = "hola"; 'h'+'o'+'l'+'a'
+
+
 
 Ejemplo de declaración de variables:
 
@@ -37,25 +41,31 @@ Los operadores en Java se dividen en varias categorías:
 Ejemplo:
 int a = 10;
 int b = 5;
+a=12
 int sum = a + b;
 int resta=a-b;
 int x=5%2;
+
 x=1;
 
+x=x+1;
+x=x+1;
 
-boolean isEqual = (a == b); // false
-boolean isEqual = (a > b); // true
-boolean isEqual = (a != b); // true
-boolean isEqual = (a <= b); // false
+
+
+boolean isEqual = (a == b);  false
+boolean isEqual = (a > b);  true
+boolean isEqual = (a != b); true
+boolean isEqual = (a <= b); false
 boolean isEqual = false;
 
 int num1=23, num2=56;
 
-if(num1!=54 && num2>45){
-int sum=num1+num2; //true
+if(num1>=23 && num2<23){
+int sum=num1+num2;
 }
 else{
-int resta=num1-num2; //false
+int resta=num1-num2;
 }
 
 
@@ -64,12 +74,16 @@ Condicionales
 
     if-else: Permite ejecutar código condicionalmente.
 
-int number = 10;
+int number = 0;
 if (number > 0) {
     System.out.println("Positive number");
-} else {
+} else if(number < 0){
     System.out.println("Negative number");
 }
+else {
+    System.out.println("Es el 0");
+}
+
 
     switch: Ideal para múltiples opciones basadas en un valor específico.
 
@@ -98,11 +112,12 @@ else{
 
 
 
-int x=5,x=7;
+int x=6,y=4;
 
 if(x==5){
     if(y==4){
         System.out.println("el primer numero es el 5 y el segundo es el 4");
+
     }
     else{
             System.out.println("Solo el primer numero coincide con el 5");
@@ -112,7 +127,15 @@ else{
     System.out.println("NO");
 }
 
-
+if(x==5 && y==4){
+    System.out.println("el primer numero es el 5 y el segundo es el 4");
+}
+else if(x==5){
+    System.out.println("Solo el primer numero coincide con el 5");
+}
+else{
+    System.out.println("NO");
+}
 
 
 
@@ -123,10 +146,19 @@ Bucles
 if(i<10){
 }
 int x=0;
-for (int i = 5; i < 10; i++) {
+for (int i = 5; i < 10; i=i+1) {
     System.out.println(i);
     x=x+i;
     System.out.println(x);
+}
+int i=5
+if(i<10){
+entras aqui
+i=i+1;
+}else if(i<10){
+i=i+1
+}else if(i<10){
+i=i+1
 }
 
     while: Repite el bloque mientras la condición sea verdadera.
