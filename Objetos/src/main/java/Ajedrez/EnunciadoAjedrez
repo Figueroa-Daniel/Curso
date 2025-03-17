@@ -1,0 +1,26 @@
+3. Un club de ajedrez quere desenvolver un programa que permita xestionar toda a información relacionada cos seus
+membros e actividades. O club está composto por xogadores, árbitros e adestradores.
+
+Para cada xogador é necesario gardar o nome, DNI, categoría (Principiante, Intermedio, Avanzado ou Mestre), o número de
+torneos gañados, o Elo (puntuación oficial) e se está federado ou non.
+
+Dos árbitros necesítase rexistrar o nome, DNI, nivel de arbitraxe (Autonómico, Nacional ou Internacional), o número de
+torneos arbitrados e a data do último torneo arbitrado.
+
+Para cada adestrador débese rexistrar o nome, DNI, anos de experiencia, a categoría de xogadores que adestra
+principalmente (Principiante, Intermedio ou Avanzado) e se dispón ou non de título oficial de adestrador.
+
+Tódalas clases deben ter un método chamado "aCadea" que devolva unha cadea cos datos almacenados.
+Ademais, cada clase debe implementar o método "calcularCota", que devolve o importe económico que supón cada persoa
+ara o club:
+
+- Para xogadores: Os federados pagan unha cota mensual de 15 €, mentres que os non federados pagan 10 €. Ademais, cada
+xogador con categoría Mestre ten un desconto do 50% na súa cota.
+- Para árbitros: Supoñen un gasto mensual fixo ao club dependendo do nivel: Autonómico (20 €), Nacional (35 €),
+Internacional (50 €).
+- Para adestradores: Supoñen un gasto mensual fixo de 100 €, aínda que se teñen título oficial, reciben un suplemento
+adicional de 25 €.
+
+Realiza o deseño das clases necesarias coas súas propiedades e métodos correspondentes que permitan modelar esta
+situación.
+
