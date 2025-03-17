@@ -11,6 +11,7 @@ public class Cerbero extends Criaturas{
     public Criaturas atacar() {
         return this;
     }
+
     //En este metodo se debe pasar el ataque del oponente menos la defensa de la criatura
     @Override
     public int defender(Criaturas atacante) {
