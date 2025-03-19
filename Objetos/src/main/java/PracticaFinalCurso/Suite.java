@@ -61,4 +61,8 @@ public class Suite extends Habitacion{
     public int hashCode() {
         return Objects.hash(super.hashCode(), nombreDeLaSuite, numeroDePlazas, serviciosExtra);
     }
+
+    public String getNombre() {
+        return nombreDeLaSuite;
+    }
 }

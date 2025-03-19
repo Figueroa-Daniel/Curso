@@ -38,7 +38,7 @@ public class Hotel {
             reserva = Arrays.copyOf(reserva,reserva.length+10);
         }
         Reserva r = new Reserva(fechaInicio,numDias,cliente,huespeds,habitacion);
-        reservas[cantidadReservas++] = r;
+        reserva[cantidadReservas++] = r;
         return r;
     }
     public void mostrarReservas(){
@@ -68,5 +68,72 @@ public class Hotel {
             i++;
         }
         return disponible;
+    }
+    public Habitacion[] getHabitacionesDisponibles(String tipo, LocalDate fecha, int numDias){
+        Habitacion[] habitacionesDisponibles = new Habitacion[10];
+        int j = 0;
+        for(Habitacion h : habitaciones){
+            if(this.isHabitacionDisponible( h.getNumero(), fecha, numDias)){
+                if (tipo.toUpperCase()=="DOBLE" && h instanceof HabitacionDoble){
+                    habitacionesDisponibles[j++] = h;
+                }else if(tipo.toUpperCase()=="SUITE" && h instanceof Suite){
+                    habitacionesDisponibles[j++] = h;
+
+                }
+
+            }
+        }
+        return Arrays.copyOf(habitacionesDisponibles,j);
+
+    }
+    public Habitacion[] getHabitaciones() {
+        return habitaciones.clone();
+    }
+    public void mostrarHabitaciones(){
+        System.out.println("HABITACIONES");
+        for (Habitacion h: habitaciones) {
+            String tipo = h instanceof HabitacionDoble ? "Doble" : "Suite";
+            System.out.println("Numero: "+h.getNumero());
+            System.out.println("Tipo: "+tipo);
+            System.out.println("Precio: "+h.getPrecio());
+            System.out.println("Descripcion: "+h.getDescripcion());
+            if(h instanceof Suite){
+                Suite s = (Suite) h;
+                System.out.println("Nombre: "+s.getNombre());
+                System.out.println("Numero de plazas: "+s.getNumeroDePlazas());
+                System.out.println("Servicios extra: "+s.getServiciosExtra());
+            }
+            System.out.println("_________________________");
+            String disponibilidad= (this.isHabitacionDisponible(h.getNumero(), LocalDate.now(), 1)) ? "Disponible" : "No disponible";
+            System.out.println("Disponibilidad: "+disponibilidad);
+
+        }
+    }
+    public Reserva agregarReserva(Cliente cliente, Huesped[] huespeds, LocalDate fechaInicio, int numDias, String tipoHabitacion) {
+        Habitacion[] disponibles =getHabitacionesDisponibles(tipoHabitacion, fechaInicio, numDias);
+        Reserva r = null;
+        if(disponibles.length>0){
+             if (tipoHabitacion.toUpperCase().equals("DOBLE")) {
+                 if (huespeds.length > 1) {
+                     System.out.println("No se pueden alojar más de 2 personas en una habitación doble");
+                     return r;
+                 } else {
+                     r = agregarReserva(cliente, huespeds, fechaInicio, numDias, disponibles[0]);
+                 }
+             }else{
+                 for(int i=0;i<disponibles.length && r==null;i++){
+                     Suite s = (Suite) disponibles[i];
+                     if(s.getNumeroDePlazas()>=huespeds.length){
+                         r = agregarReserva(cliente, huespeds, fechaInicio, numDias, disponibles[i]);
+                     }
+                 }
+                 if(r==null){
+                     System.out.println("No hay suites disponibles con plazas suficientes");
+                 }
+             }
+        }else {
+            System.out.println("No hay habitaciones disponibles");
+        }
+        return r;
     }
 }
