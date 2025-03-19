@@ -1,6 +1,6 @@
 package Ajedrez;
 
-public class Xogador extends Miembro{
+public class Xogador extends Miembro implements Partida{
 
 
     private Categoria categoria;

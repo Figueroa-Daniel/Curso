@@ -1,7 +1,7 @@
 package Ajedrez;
 
-public class Arbitros extends Miembro{
-    private enum CategoriaArbitro {
+public class Arbitros extends Miembro implements Partida{
+    public enum CategoriaArbitro {
         AUTONOMICO, NACIONAL, INTERNACIONAL
     }
     private CategoriaArbitro categoria;
@@ -14,11 +14,11 @@ public class Arbitros extends Miembro{
         this.numeroTorneos = numeroTorneos;
         this.fechaUltimoTorneo = fechaUltimoTorneo;
     }
-    public Categoria getCategoria() {
+    public CategoriaArbitro getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(Categoria categoria) {
+    public void setCategoria(CategoriaArbitro categoria) {
         this.categoria = categoria;
     }
 
