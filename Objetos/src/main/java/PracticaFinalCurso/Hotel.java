@@ -57,4 +57,16 @@ public class Hotel {
             System.out.println("_________________________");
         }
     }
+    public boolean isHabitacionDisponible(int numero, LocalDate fecha, int numDias){
+        boolean disponible = true;
+        int i = 0;
+        while(i<cantidadReservas && disponible){
+            Reserva r = reserva[i];
+            if(r.getHabitacion().getNumero()==numero) {
+                disponible = !UtilFechas.overlaps(r.getFechaInicio(), r.getFechaFin(), fecha, fecha.plusDays(numDias));
+            }
+            i++;
+        }
+        return disponible;
+    }
 }
