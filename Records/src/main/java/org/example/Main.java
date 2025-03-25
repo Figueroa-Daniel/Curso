@@ -15,5 +15,15 @@ public class Main {
         if(a.equals(c)){ //no son iguales
             System.out.println("Son iguales");
         }
+        // Alumno d = new Alumno(null, "Miranda", "hola@gmail.com",21); //Salta excepcion
+
+        Alumno e = new Alumno("Miguel","Machacu",16);
+        System.out.println(e);
+
+        Producto p = new Producto(1l," Nombre del producto",20.0);
+        System.out.println(p);
+
+        System.out.println(e.nombreComloto());
+
     }
 }
