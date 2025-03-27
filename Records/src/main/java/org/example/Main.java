@@ -1,5 +1,7 @@
 package org.example;
 
+import java.time.LocalDate;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -24,6 +26,11 @@ public class Main {
         System.out.println(p);
 
         System.out.println(e.nombreComloto());
+        Empresa emp = new Empresa ("Microsoft",new Empleado[]{
+                new Empleado("Bill","Gates", LocalDate.of(1975,4,4)),
+                new Empleado("Paul","Allen",LocalDate.of(1975,4,4))
 
+        });
+        System.out.println(emp);
     }
 }
