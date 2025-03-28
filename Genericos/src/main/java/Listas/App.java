@@ -1,4 +1,4 @@
-package List;
+package Listas;
 
 import java.util.List;
 
@@ -9,5 +9,12 @@ public class App {
         ClaseSinGenericos claseSinGenericos = new ClaseSinGenericos();
         claseSinGenericos.imprimirListaCadena(cadenas);
         claseSinGenericos.imprmirListaEnteros(enteros);
+        //--------------------------------------------------------------------------------
+
+        ClaseConGenericos<String> claseConGenericos = new ClaseConGenericos<>();
+        claseConGenericos.imprimirLista(cadenas);
+
+        ClaseUtil.imprimirLista(enteros);
+        ClaseUtil.imprimirLista(cadenas);
     }
 }

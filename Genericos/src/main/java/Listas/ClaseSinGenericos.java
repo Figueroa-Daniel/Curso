@@ -1,4 +1,4 @@
-package List;
+package Listas;
 
 import java.util.List;
 
