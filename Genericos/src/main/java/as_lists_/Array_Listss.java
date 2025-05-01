@@ -1,6 +1,7 @@
 package as_lists_;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -37,7 +38,29 @@ public class Array_Listss {
         int pos2= lista4.lastIndexOf(27); // devuelve la posicion del elemento(ultima coincidencia)
         boolean contains = lista4.contains(27); // devuelve true o false
         System.out.println(contains);
-        contains= lista4.containsAll(List.of(1,2,3,4)); // devuelve true o false
-
+        contains= lista4.containsAll(List.of(1,2,3,4));
+        System.out.println(contains);// devuelve true
+        contains= lista4.containsAll(List.of(1,2,4));
+        System.out.println(contains);// devuelve true
+        contains= lista4.containsAll(List.of(1,2,4,5));
+        System.out.println(contains);// devuelve false
+        contains = lista4.containsAll(List.of(1,3,2,4));
+        System.out.println(contains);// devuelve true
+        // containsAll no funciona de forma ordenada
+        System.out.println("------------------");
+        // subList: te devuelve una lista con los elementos de la lista original
+        // pero no es una copia, es una vista de la lista original, solo son las direcciones
+        // de los elementos, no los elementos en sí
+        List<Integer> subLista = lista4.subList(0, 5);
+        System.out.println(subLista);
+        subLista.set(0, 100);
+        System.out.println(subLista);
+        System.out.println(lista4);
+        System.out.println("------------------");
+        // toArray: convierte la lista en un array
+        Integer[] array = lista4.toArray(new Integer[0]);
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]+"-");
+        }
     }
 }
