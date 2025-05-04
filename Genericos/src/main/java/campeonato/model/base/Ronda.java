@@ -10,13 +10,11 @@ public class Ronda <T extends ParticipanteAbscracto> implements Comparable<Ronda
     private boolean terminada;
     private List<T> ganadores;
 
-    public Ronda(String titulo, int numero, boolean esFinal, List<Partido<T>> partidos, boolean terminada, List<T> ganadores) {
+    public Ronda(String titulo, int numero, boolean esFinal, List<Partido<T>> partidos) {
         this.titulo = titulo;
         this.numero = numero;
         this.esFinal = esFinal;
         this.partidos = partidos;
-        this.terminada = terminada;
-        this.ganadores = ganadores;
     }
 
     public boolean isEsFinal() {
@@ -63,6 +61,7 @@ public class Ronda <T extends ParticipanteAbscracto> implements Comparable<Ronda
         if(this.terminada){
             extraerGanadores();
         }
+        return this.terminada;
     }
 
     private void extraerGanadores() {

@@ -1,7 +1,7 @@
 package campeonato.model.base;
 
 import java.util.Objects;
-import java.util.SortedSet
+import java.util.SortedSet;
 
 import java.util.List;
 import java.util.TreeSet;
