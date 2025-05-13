@@ -53,7 +53,16 @@ public class Funcionalidades {
             System.out.println("Está totalmente vacía");
         // getchar
         // split->convertir cadena en un array
-
+        char i=2;
+        if(Character.isDigit(i)){
+            System.out.println("Es digito");
+        }
+        if (Character.isLetter(i)){
+            System.out.println("Es letra");
+        }
+        if (Character.isSpaceChar(i)){
+            System.out.println("Es un espacio");
+        }
 
 
 
