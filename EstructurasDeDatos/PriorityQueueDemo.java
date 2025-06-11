@@ -33,7 +33,16 @@ public class PriorityQueueDemo {
         stringQueue.remove("apple"); // Elimina un elemento específico
         // El poll devuelve el primer elemento y lo elimina
         System.out.println("Primer elemento eliminado: " + names.poll());
-        //30:14
+        // PriorytyQueuw con comparator, esto elimina el primer elemento según el criterio del comparator
+        PriorityQueue<String> customPriorityQueue = new PriorityQueue<>( Comparator.comparingInt(String::length)); // Orden descendente
+        customPriorityQueue.offer("banana");
+        customPriorityQueue.offer("apple");
+        customPriorityQueue.offer("cherry");
+        customPriorityQueue.offer("date");
+        while (!customPriorityQueue.isEmpty()) {
+            System.out.println("Elemento eliminado: " + customPriorityQueue.poll()); // Elimina el primer elemento
+        }
+
 
 
     }
