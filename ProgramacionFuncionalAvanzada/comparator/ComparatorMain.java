@@ -1,4 +1,4 @@
-package ProgramacionFuncionalAvanzada.Comparator;
+package ProgramacionFuncionalAvanzada.comparator;
 
 import ProgramacionFuncionalAvanzada.Product;
 
