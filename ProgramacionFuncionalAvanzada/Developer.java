@@ -36,4 +36,12 @@ public class Developer {
     public void setTasks(List<Task> tasks) {
         this.tasks = tasks;
     }
+    @Override
+    public String toString() {
+        return "Developer{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", tasks=" + tasks +
+                '}';
+    }
 }

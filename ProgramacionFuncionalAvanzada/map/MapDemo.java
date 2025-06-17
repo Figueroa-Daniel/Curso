@@ -6,6 +6,8 @@ import ProgramacionFuncionalAvanzada.Task;
 import java.util.Comparator;
 import java.util.List;
 
+import static java.util.Arrays.stream;
+
 
 public class MapDemo {
     public static void main(String[] args) {
@@ -17,8 +19,19 @@ public class MapDemo {
         List<Developer> developers = getDevelopers();
         developers.stream()
                 .flatMap(dev -> dev.getTasks().stream())
-                .filter(task -> task.getHours() > 5)
-                .forEach(System.out::println); //24:30
+                .filter(task -> task.getHours()   > 5)
+                .forEach(System.out::println);
+        // lo mismo pero con 3 listas de integger
+        List<Integer> list1 = List.of(1, 2, 3);
+        List<Integer> list2 = List.of(4, 5, 6);
+        List<Integer> list3 = List.of(7, 8, 9);
+        List<List<Integer>> lists = List.of(list1, list2, list3);
+        List<Integer> results = lists.stream()
+                .flatMap(List::stream)
+                .filter(num -> num > 5)
+                .map(num -> num*num)
+                .toList();
+        // el peek serviria para depurar el flujo de datos
     }
     private static List<Developer> getDevelopers(){
         Task task1 = new Task(1L, "Description 1", 5);
