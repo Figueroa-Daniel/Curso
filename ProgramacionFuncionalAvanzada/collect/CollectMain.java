@@ -38,7 +38,11 @@ public class CollectMain {
 
         List<Developer> devs = getDevelopers();
         Map<Integer, List<Developer>> developersGroupList = devs.stream().collect(Collectors.groupingBy(Developer::getAge));
-        System.out.println("Desarrolladores agrupados por edad: " + developersGroupList); 45:00
+        System.out.println("Desarrolladores agrupados por edad: " + developersGroupList);
+
+        products.stream().mapToDouble(Product::getPrice).average().ifPresent(System.out::println);
+        // podrias usar un orElse para poner un valor por defecto si no hay elementos
+
 
     }
     private static List<Developer> getDevelopers(){
