@@ -17,7 +17,7 @@ public class Main2 {
         map.put(2, "Dos");
         map.put(3, "Tres");
         map.forEach((key,value) -> {
-            System.out.println("Clave: " + integer + ", Valor: " + s);
+            System.out.println("Clave: " + key + ", Valor: " + value);
         });
 
     }
