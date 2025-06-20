@@ -1,6 +1,6 @@
 package MetodosDeReferencia.staticmetodos;
 
-import java.awt.*;
+import java.util.List;
 import java.util.function.Predicate;
 
 public class Main2 {
@@ -10,8 +10,9 @@ public class Main2 {
         List<Integer> numbers = List.of(1,2,3,4,5,6,7,8,9,10);
         numbers.stream()
                 .filter(Operations::esPar)
+                .filter(Operations::esNegativo) // Filtra los números negativos
                 .forEach(System.out::println); // Imprime los números pares de la lista
-        54:00
+
     }
 }
 class Operations{
