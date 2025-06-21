@@ -9,7 +9,7 @@ public class Main {
                     System.out.println(thread.getName());
                     System.out.println(thread.getState());
                     System.out.println(thread.isAlive());
+                    System.out.println("==========================");
                 });
-        9:00
     }
 }
