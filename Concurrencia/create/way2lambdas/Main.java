@@ -6,6 +6,7 @@ public class Main {
         hilo.start();
         // También es comun hacerlo de esta manera:
         new Thread(() -> System.out.println("My name is: " + Thread.currentThread().getName() + " and my state is: " + Thread.currentThread().getState())).start();
-        20:00
+
     }
 }
+
