@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<DatosComunes>
+    <nombre>Miguel</nombre>
+    <restaurante>Casa Miguel</restaurante>
+    <restaurantes>
+        <informacion id="1">
+            <cif>A123456789</cif>
+            <nombre>Casa Burgos</nombre>
+            <direccion>Calle Treiana</direccion>
+            <ciudad>Sevilla</ciudad>
+        </informacion>
+        <informacion id="2">
+            <cif></cif>
+            <nombre></nombre>
+            <direccion></direccion>
+        </informacion>
+        <informacion id="3">
+            <cif></cif>
+            <nombre></nombre>
+            <direccion></direccion>
+        </informacion>
+    </restaurantes>
+
+</DatosComunes>
