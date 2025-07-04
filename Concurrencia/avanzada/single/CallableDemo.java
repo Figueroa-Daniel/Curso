@@ -14,6 +14,5 @@ public class CallableDemo {
         System.out.println("El resultado es: " + result);
         System.out.println("fin");
         executor.shutdown();
-        19:00
     }
 }
